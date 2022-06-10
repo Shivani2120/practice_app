@@ -1,0 +1,15 @@
+   <% @teacher.subjects.each do |subject| %>
+    <p>
+      <%= subject.name %>
+    <p>
+      <p>
+    <%= link_to "Destroy subject", teacher_subject_path(@teacher, subject), data: {
+                  method: :delete,
+                  confirm: "Are you sure?"
+                } %>
+    </p>
+
+    <% end%>
+ 
+
+

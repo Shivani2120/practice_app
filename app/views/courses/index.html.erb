@@ -1,0 +1,26 @@
+<table>
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Duration</td>
+        <td>Fees</td>
+      </tr>
+    </thead>  
+
+    <tbody>
+    
+      <% @courses.each do |course| %>
+        <tr>
+           <th><%= course.name %></th>
+           <th><%= course.duration %></th>
+           <th><%= course.fees %></th>
+           <th><%= link_to "show", course_path(course) %></th>
+           <th><%= link_to "edit", edit_course_path(course) %></th>
+           <th><%= link_to "destroy", course , method: :delete %></th>
+        </tr>
+        <% end %>
+    </tbody>  
+</table>
+
+    <%= link_to "new course", new_course_path %>
+

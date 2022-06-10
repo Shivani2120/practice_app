@@ -1,0 +1,45 @@
+
+<p>
+  <strong> First Name: </strong>
+  <%= @student.first_name %>
+</p>
+
+<p>
+  <strong> Last Name: </strong>
+  <%= @student.last_name %>
+</p>
+
+<p>
+  <strong> age: </strong>
+  <%= @student.age %>
+</p>
+
+<p>
+  <strong> Contact: </strong>
+  <%= @student.contact %>
+</p>
+
+<p>
+  <strong> Course Name: </strong>
+  <%= @student.course_name %>
+</p>
+
+<p>
+  <strong> Rollnumber: </strong>
+  <%= @student.rollnumber %>
+</p>
+
+<% if @student.addresses.present? %>
+  <strong>Addresses</strong>
+  <p>
+    <% @student.addresses.each do |address| %>
+      Country: <%= address.country %> <br>
+      City: <%= address.city %> <br>
+      Place/Building/Streat: <%= address.place_building_streat %>
+      Pincode: <%= address.pincode %>
+    <% end %>
+  </p>
+<% end %>
+
+
+<%= link_to "Back", students_path %>

@@ -1,0 +1,21 @@
+<%= form_with model:@course do |form| %>
+    <div>
+        <%= form.label :Name %>
+        <%= form.text_field :name %>
+    </div>
+
+    <div>
+        <%= form.label :Duration %>
+        <%= form.text_field :duration %>
+    </div>
+
+    <div>
+        <%= form.label :Fees %>
+        <%= form.text_field :fees %>
+    </div>
+
+    <div>
+       <%= form.submit %>
+    </div>
+
+<% end %>

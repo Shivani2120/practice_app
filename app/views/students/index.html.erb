@@ -1,0 +1,40 @@
+
+<h1>Student Data</h1>
+<%= form_tag(students_path, method: :get) do %>
+  <p> Search for a student </p>
+  <%= text_field_tag(:search, params[:search]) %>
+  <%= submit_tag ("Search") %>
+<% end %>
+  
+  <table>
+  <thead>
+
+  <h2>Student data</h2>
+   <tr>
+     <td>first_name</td>
+     <td>last_name</td>
+     <td>age</td>
+     <td>contact</td>
+     <td>rollnumber</td>
+     <td>course_name</td>
+    </tr>
+  </thead>
+  <tbody>
+  <% @students.each do |student| %>
+  <tr>
+     <th><%= student.first_name %></th>
+     <th><%= student.last_name %></th>
+     <th><%= student.age %></th>
+     <th><%= student.contact %></th>
+     <th><%= student.rollnumber %></th>
+     <th><%= student.course_name %></th>
+     <th><%= link_to "Edit", edit_student_path(student) %></th>
+     <th><%= link_to "Show", student_path(student) %></th>
+     <th><%= link_to "destroy", student , method: :delete %></th>
+   </tr> 
+   <% end %> 
+  </tbody>
+  </table>
+
+
+<%= link_to 'new student data', new_student_path %>

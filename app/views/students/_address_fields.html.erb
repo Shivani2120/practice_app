@@ -1,0 +1,23 @@
+<div class="nested-fields">
+  <div class="field">
+    <%= f.label :country %><br>
+    <%= f.select :country, options_for_select([["Select One", ""], "India", "America", "China", "Rusia", "Other"]), :class => 'genform_dropBox' %>
+  </div>
+
+  <div class="field">
+     <%= f.label :City %>
+     <%= f.select :city, options_for_select([["Select One", ""], "Indore", "Bhopal", "Bangloru", "Hedrabad", "channai"]), :class => 'genform_dropBox' %>
+  </div>
+
+   <div class="field">
+     <%= f.label :place_building_streat %>
+     <%= f.text_field :place_building_streat %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pincode %>
+    <%= f.text_field :pincode %>
+  </div>
+
+  <%= link_to_remove_association "remove address", f %>
+</div>  

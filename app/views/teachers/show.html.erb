@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @teacher.name %>
+</p>
+
+<%= link_to 'Edit', edit_teacher_path(@teacher) %> |
+<%= link_to 'Back', teachers_path %>
+
+
+<p>
+  <strong>Subject:</strong>
+  <%= render "subjects/subject" %>
+<p>
+
+<p>
+  <strong> Add a subject: </strong>
+  <%= render "subjects/form" %>
+</p>
+
+

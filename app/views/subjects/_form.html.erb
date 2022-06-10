@@ -1,0 +1,13 @@
+
+<%= form_with model: [ @teacher, @teacher.subjects.build ] do |form| %>
+
+  <p>
+    <%= form.label :Subject %><br>
+    <%= form.select :name, options_for_select([["Select One", ""], "Hindi", "English", "Math", "science"]), :class => 'genform_dropBox' %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>
